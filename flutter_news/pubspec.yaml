@@ -1,0 +1,25 @@
+name: flutter_news
+description: News application build with Flutter.
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_webview_plugin: ^0.1.4
+  cached_network_image: ^0.3.0
+  cupertino_icons: ^0.1.0
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+
+# The following section is specific to Flutter.
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/images/naga.png
+
