@@ -32,7 +32,7 @@ abstract class LoaderStateChangedCallback {
 
 class NewsLoader {
 
-    static const API_KEY = '';
+    static const API_KEY = '3a86f36bd3ecac8a51135ded5eebe862';
 
 
     String newsCategory;
@@ -63,6 +63,13 @@ class NewsLoader {
 
         lastLoadReason = map['reason'];
         var result = map['result'];
+        if (result == null) {
+            print('load failed: ' + lastLoadReason);
+            loadState = NewsLoadState.Error;
+            _notifyLoadStateChanged();
+            return;
+        }
+
         var stat = result['stat'];
         if (stat == null || "1".compareTo(stat) != 0) {
             print('Load news of $newsCategory FAILED! stat = $stat');

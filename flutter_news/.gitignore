@@ -8,3 +8,9 @@ build/
 ios/.generated/
 packages
 .flutter-plugins
+.project/
+.settings/
+.claspath/
+.project
+.classpath
+
